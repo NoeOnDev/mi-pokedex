@@ -29,6 +29,80 @@ header {
     box-shadow: var(--shadow);
 }
 
+header .header-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+header .logo-container {
+    margin-right: 1rem;
+}
+
+header .logo-link {
+    text-decoration: none;
+    color: white;
+}
+
+header .search-container {
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 1rem;
+}
+
+header .search-form {
+    display: flex;
+    width: 100%;
+}
+
+header .search-input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+}
+
+header .search-button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+header .search-button:hover {
+    background-color: #2a4380;
+}
+
+header .main-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+header .main-nav li {
+    margin-left: 1.5rem;
+}
+
+header .main-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+header .main-nav a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
 main {
     flex: 1;
     padding: 1rem;
@@ -311,6 +385,42 @@ footer a {
     color: var(--primary-color);
 }
 
+/* Estilos para iconos */
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.icon-link:hover {
+    transform: scale(1.2);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.social-icon-link:hover {
+    transform: translateY(-5px);
+}
+
+.social-icon-link span {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .pokemon-grid {
@@ -325,5 +435,33 @@ footer a {
     .info-group {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: none;
+        margin: 0 0 1rem 0;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav ul {
+        justify-content: center;
+    }
+
+    .main-nav li {
+        margin: 0 0.75rem;
     }
 }
