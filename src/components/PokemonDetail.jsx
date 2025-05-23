@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getPokemonDetail } from "../services/pokemonService";
+import EvolutionChain from "./EvolutionChain"; // Añadir esta importación
 
 function PokemonDetail() {
   const { name } = useParams();
@@ -113,6 +114,7 @@ function PokemonDetail() {
             </div>
           ))}
         </div>
+        <EvolutionChain pokemonId={pokemon.id} />
       </div>
     </div>
   );

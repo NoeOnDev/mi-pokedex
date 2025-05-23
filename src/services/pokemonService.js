@@ -33,3 +33,23 @@ export const getPokemonByType = async (type) => {
     throw error;
   }
 };
+
+export const getPokemonSpecies = async (nameOrId) => {
+  try {
+    const response = await axios.get(`${API_URL}/pokemon-species/${nameOrId}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error obteniendo especie del pokemon ${nameOrId}:`, error);
+    throw error;
+  }
+};
+
+export const getEvolutionChain = async (url) => {
+  try {
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    console.error("Error obteniendo cadena de evolución:", error);
+    throw error;
+  }
+};
