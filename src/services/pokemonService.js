@@ -23,3 +23,13 @@ export const getPokemonDetail = async (nameOrId) => {
     throw error;
   }
 };
+
+export const getPokemonByType = async (type) => {
+  try {
+    const response = await axios.get(`${API_URL}/type/${type}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error obteniendo pokémon del tipo ${type}:`, error);
+    throw error;
+  }
+};
