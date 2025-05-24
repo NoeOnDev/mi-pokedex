@@ -4,6 +4,7 @@ import DetailPage from "./pages/DetailPage";
 import AboutPage from "./pages/AboutPage";
 import ComparePage from "./pages/ComparePage";
 import SearchBar from "./components/SearchBar";
+import MobileMenu from "./components/MobileMenu";
 import { FaGithub } from "react-icons/fa";
 import { CompareProvider } from "./contexts/CompareContext";
 import "./index.css";
@@ -23,7 +24,7 @@ function App() {
               <div className="search-container">
                 <SearchBar />
               </div>
-              <nav className="main-nav">
+              <nav className="main-nav desktop-nav">
                 <ul>
                   <li>
                     <Link to="/">Inicio</Link>
@@ -46,6 +47,9 @@ function App() {
                   </li>
                 </ul>
               </nav>
+              <div className="mobile-nav">
+                <MobileMenu />
+              </div>
             </div>
           </header>
           <main>
