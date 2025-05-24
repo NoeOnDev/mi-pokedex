@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import { getPokemonDetail } from "../services/pokemonService";
-import EvolutionChain from "./EvolutionChain"; // Añadir esta importación
+import EvolutionChain from "./EvolutionChain";
+import CompareButton from "./CompareButton";
 
 function PokemonDetail() {
   const { name } = useParams();
@@ -42,9 +43,12 @@ function PokemonDetail() {
           <h1>
             {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
           </h1>
-          <p className="pokemon-id">
-            #{pokemon.id.toString().padStart(3, "0")}
-          </p>
+          <div className="pokemon-actions">
+            <CompareButton pokemon={pokemon} isDetailPage={true} />
+            <p className="pokemon-id">
+              #{pokemon.id.toString().padStart(3, "0")}
+            </p>
+          </div>
         </div>
 
         <div className="pokemon-images">
