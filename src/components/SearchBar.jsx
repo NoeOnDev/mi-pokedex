@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -23,7 +24,7 @@ function SearchBar() {
         className="search-input"
       />
       <button type="submit" className="search-button">
-        Buscar
+        <FaSearch />
       </button>
     </form>
   );

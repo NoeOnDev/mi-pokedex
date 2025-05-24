@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FaArrowRight, FaArrowDown } from "react-icons/fa";
 import {
   getPokemonSpecies,
   getEvolutionChain,
@@ -62,7 +63,10 @@ function EvolutionChain({ pokemonId }) {
 
         {chain.evolves_to && chain.evolves_to.length > 0 && (
           <>
-            <div className="evolution-arrow">→</div>
+            <div className="evolution-arrow">
+              <FaArrowRight className="evolution-arrow-desktop" />
+              <FaArrowDown className="evolution-arrow-mobile" />
+            </div>
             <div className="evolution-chain">
               {chain.evolves_to.map((evolvesTo, index) => (
                 <div key={index}>{renderEvolutionChain(evolvesTo)}</div>
