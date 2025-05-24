@@ -9,16 +9,17 @@ Una aplicación web desarrollada con React y Vite que consume la API de Pokémon
 <p align="center">
   <img src="public/inicio.png" alt="Página principal con listado de Pokémon" width="700"/>
   <p align="center"><em>Página principal con listado de Pokémon y filtrado por tipo</em></p>
-  
+</p>
+<p align="center">
   <img src="public/detalles.png" alt="Página de detalle de Pokémon" width="700"/>
   <p align="center"><em>Página de detalle mostrando estadísticas, habilidades y tipos</em></p>
-  
+  <p align="center">
   <img src="public/evoluciones.png" alt="Visualización de cadenas evolutivas" width="700"/>
   <p align="center"><em>Visualización de la cadena evolutiva de cada Pokémon</em></p>
-  
+  <p align="center">
   <img src="public/comparar.png" alt="Comparación de estadísticas entre Pokémon" width="700"/>
   <p align="center"><em>Herramienta de comparación para analizar dos Pokémon lado a lado</em></p>
-</p>
+
 
 ## ✨ Características
 
