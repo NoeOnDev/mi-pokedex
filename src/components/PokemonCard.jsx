@@ -12,9 +12,9 @@ function PokemonCard({ pokemon }) {
             }.png`}
             alt={pokemon.name}
           />
-          <h3>
+          <h4>
             {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-          </h3>
+          </h4>
         </div>
       </Link>
       <div className="pokemon-card-footer">
